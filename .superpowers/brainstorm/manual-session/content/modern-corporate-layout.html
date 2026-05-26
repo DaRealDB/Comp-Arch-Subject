@@ -1,0 +1,53 @@
+<h2>Design Layout: Modern Corporate</h2>
+<p class="subtitle">Applying a professional, structured look to the Traffic Management System</p>
+
+<div class="mockup">
+  <div class="mockup-header" style="background: #2c3e50; color: #ecf0f1;">City Traffic Management System v1.0</div>
+  <div class="mockup-body" style="background: #1a1a1a; color: #bdc3c7; font-family: monospace; padding: 20px;">
+    
+    <div style="border: 1px solid #34495e; padding: 15px; margin-bottom: 20px;">
+      <div style="color: #4CAF50; font-weight: bold; border-bottom: 1px dashed #34495e; padding-bottom: 5px; margin-bottom: 10px;">
+        [ INTERSECTION STATUS: GREEN ]
+      </div>
+      <div style="margin-bottom: 10px;">>> Vehicles may proceed</div>
+      <div style="color: #7f8c8d; font-size: 0.9em;">Signal Duration: ~30 seconds</div>
+    </div>
+
+    <div style="color: #95a5a6;">
+      >> Monitoring intersection...<br>
+      >> Sensors active...
+    </div>
+
+    <div style="margin-top: 30px; border-top: 1px solid #34495e; padding-top: 10px; color: #7f8c8d; font-size: 0.8em; display: flex; justify-content: space-between;">
+      <span>[P] Emergency Override</span>
+      <span>[Q] Shutdown</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Implementation Strategy</h3>
+  <p>To achieve this look in 8086 Assembly, we will use:</p>
+  <ul>
+    <li><strong>BIOS INT 10h / AH=06h:</strong> To set specific background/foreground colors for different text blocks.</li>
+    <li><strong>BIOS INT 10h / AH=09h:</strong> To write characters with specific color attributes (e.g., Green for the status line).</li>
+    <li><strong>Extended ASCII Characters:</strong> Using boxes (201, 187, etc.) for a cleaner UI than simple '+' and '-'.</li>
+  </ul>
+</div>
+
+<div class="options" data-multiselect>
+  <div class="option" data-choice="boxed-ui" onclick="toggleSelect(this)">
+    <div class="letter">1</div>
+    <div class="content">
+      <h3>Boxed UI</h3>
+      <p>Use ASCII box-drawing characters for all borders instead of '+' and '-'.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="status-colors" onclick="toggleSelect(this)">
+    <div class="letter">2</div>
+    <div class="content">
+      <h3>Contextual Colors</h3>
+      <p>Change the entire block background color based on state (e.g., dark green background when signal is green).</p>
+    </div>
+  </div>
+</div>

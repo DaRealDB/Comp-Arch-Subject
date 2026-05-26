@@ -1,0 +1,37 @@
+<h2>Design Approved: Modern Corporate</h2>
+<p class="subtitle">Summary of planned UI enhancements</p>
+
+<div class="pros-cons">
+  <div class="pros">
+    <h4>Visual Upgrades</h4>
+    <ul>
+      <li><strong>Box Drawing:</strong> Replacing <code>+</code>, <code>-</code>, <code>|</code> with <code>╔</code>, <code>═</code>, <code>║</code>, etc.</li>
+      <li><strong>Background Alerts:</strong> Status panels will have colored backgrounds (Dark Green, Dark Yellow, Dark Red).</li>
+      <li><strong>Header/Footer:</strong> Fixed Slate/Blue header for the system title.</li>
+    </ul>
+  </div>
+  <div class="cons">
+    <h4>Technical Notes</h4>
+    <ul>
+      <li>Uses BIOS <strong>INT 10h</strong> for color attributes.</li>
+      <li>Maintains original logic and timing.</li>
+      <li>Optimized for standard 80x25 text mode.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Next Step</h3>
+  <p>I will now generate the official Design Specification and then create an implementation plan to update <code>Proj.asm</code>.</p>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Final Polish: Red State Example</div>
+  <div class="mockup-body" style="background: #1a1a1a; padding: 20px; font-family: monospace;">
+    <div style="background: #c0392b; color: white; padding: 10px; border: 2px solid #7f271d;">
+      ╔════════════ [ INTERSECTION STATUS ] ════════════╗<br>
+      ║  [  RED   ]  >>  ALL VEHICLES STOP!!           ║<br>
+      ╚════════════════════════════════════════════════╝
+    </div>
+  </div>
+</div>
